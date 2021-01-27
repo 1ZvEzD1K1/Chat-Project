@@ -1,11 +1,13 @@
 import React from 'react';
-import './App.css';
+import { Provider } from "react-redux";
+import store from "./redux-sagas/store";
+import MainNavigator from './screns/MainNavigator';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div>
-      123
-    </div>
+    <Provider store={store}>
+      <MainNavigator/>
+    </Provider>
   );
 }
 
